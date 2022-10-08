@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <article>
+      <div class="info">
+        <h3><%= wordData.word %></h3>
+        <p><%= wordData.textMeaning %></p>
+        <p><%= wordData.textExample %></p>
+        <img src=<%= wordData.image %> alt=<%= word.wordName %> >
+        <audio controls src=<%= wordData.audio %> >
+      </div>
+    </article>
+  </body>
+</html>
+

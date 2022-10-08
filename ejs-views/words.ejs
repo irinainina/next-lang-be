@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <h1>Words:</h1>
+    <ul>
+      <% if (words.length) { %>
+        <% words.forEach(({ word, textMeaning, textExample, image, audio }) => { %>
+          <li>
+            <article>
+              <h2>
+                <a href="/words"><%= title %></a>
+              </h2>
+              <div class="info">
+                <h3><%= word %></h3>
+                <p><%= textMeaning %></p>
+                <p><%= textExample %></p>
+                <img src=<%= image %> alt=<%= word %> >
+                <audio controls src=<%= audio %> >
+              </div>
+            </article>
+          </li>
+        <% }) %>
+      <% } %>
+    </ul>
+  </body>
+</html>
