@@ -49,7 +49,6 @@ app.get('/words', (req, res) => {
   const title = 'Words';
   Word.find({ page:2, group:3 })
     .then((words) => {
-      console.log(words[0]);
       res.render(createPath('words'), { words, title });
     })
     .catch((error) => {
